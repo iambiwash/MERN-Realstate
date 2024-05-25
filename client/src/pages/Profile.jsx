@@ -31,6 +31,8 @@ export default function Profile() {
   const dispatch = useDispatch();
   const [updateSuccess, setUpdateSuccess] = useState(false);
 
+  const [userListings, setUserListings] = useState([]);
+  const [showListingError, setShowListingError] = useState(false);
   //Firebase Storage Rules
   //       allow read;
   //       allow write: if
@@ -109,6 +111,21 @@ export default function Profile() {
       dispatch(deleteUserSuccess(data));
     } catch (error) {
       dispatch(deleteUserFailure(error.message));
+    }
+  };
+
+  const handleShowListing = async (e) => {
+    try {
+      const res = await fetch(`/api/user/listings/${currentUser._id}`);
+      const data = await res.json();
+
+      if (data.success === false) {
+        setShowListingError(true);
+        return;
+      }
+      setUserListings(data);
+    } catch (error) {
+      setShowListingError(true);
     }
   };
 
@@ -210,7 +227,6 @@ export default function Profile() {
           Delete Account
         </span>
         <span onClick={handleSignOut} className="text-red-700 cursor-pointer">
-          {" "}
           Sign Out
         </span>
       </div>
@@ -218,6 +234,47 @@ export default function Profile() {
       <p className="text-green-700 mt-5">
         {updateSuccess ? "Updated Successfully !!" : ""}
       </p>
+      <button onClick={handleShowListing} className="text-green-700 w-full">
+        Show Listings
+      </button>
+      <p className="text-red-700 w-full">
+        {showListingError ? "Error showing Listings" : ""}
+      </p>
+      {userListings && userListings.length > 0 && (
+        <div className="flex flex-col gap-4">
+          <h1 className="text-center mt-7 text-2xl font-semibold">
+            Your Listings
+          </h1>
+          {userListings.map((listing) => (
+            <div
+              key={listing._id}
+              className="bg-slate-200 border rounded-lg p-3 flex justify-between items-center gap-10"
+            >
+              <Link to={`/listing/${listing._id}`}>
+                <img
+                  className="h-16 w-16  object-contain "
+                  src={listing.imageUrls[0]}
+                  alt="listing image"
+                />
+              </Link>
+              <Link
+                className=" flex-1 text-slate-700 font-semibold hover:underline truncate"
+                to={`/listing/${listing._id}`}
+              >
+                <p>{listing.name}</p>
+              </Link>
+              <div className="flex flex-col">
+                <button className="text-red-700 hover:opacity-75">
+                  Delete
+                </button>
+                <button className="text-green-700 hover:opacity-75">
+                  Edit
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
