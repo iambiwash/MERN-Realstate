@@ -1,28 +1,60 @@
 export default function About() {
   return (
-    <div className="py-20 px-4 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4 text-slate-800">
-        About Biwash Estate
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">
+        Welcome to PropertEase!
       </h1>
-      <p className="mb-4 text-slate-700">
-        Biwash Estate is a leading real estate agency that specializes in
-        helping clients buy, sell, and rent properties in the most desirable
-        neighborhoods. Our team of experienced agents is dedicated to providing
-        exceptional service and making the buying and selling process as smooth
-        as possible.
+      <p className="text-lg text-gray-700 mb-6">
+        At PropertEase, we believe that finding your dream home or the perfect
+        investment property should be a seamless and enjoyable experience.
+        Whether you’re looking to buy, sell, or rent, our platform is designed
+        to simplify the real estate process, making it easier than ever to
+        navigate the market and find exactly what you’re looking for.
       </p>
-      <p className="mb-4 text-slate-700">
-        Our mission is to help our clients achieve their real estate goals by
-        providing expert advice, personalized service, and a deep understanding
-        of the local market. Whether you are looking to buy, sell, or rent a
-        property, we are here to help you every step of the way.
+
+      <h2 className="text-2xl font-semibold text-gray-800 mb-4">Our Mission</h2>
+      <p className="text-lg text-gray-700 mb-6">
+        Our mission is to revolutionize the real estate industry by providing a
+        user-friendly platform that connects buyers, sellers, and renters with
+        the best properties available. We strive to empower our users with the
+        information and tools they need to make informed decisions, ensuring a
+        smooth and transparent transaction process from start to finish.
       </p>
-      <p className="mb-4 text-slate-700">
-        Our team of agents has a wealth of experience and knowledge in the real
-        estate industry, and we are committed to providing the highest level of
-        service to our clients. We believe that buying or selling a property
-        should be an exciting and rewarding experience, and we are dedicated to
-        making that a reality for each and every one of our clients.
+
+      <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+        Why Choose PropertEase?
+      </h2>
+      <p className="text-lg text-gray-700 mb-6">
+        PropertEase stands out with its intuitive interface, comprehensive
+        property listings, and advanced search capabilities. We’ve integrated
+        cutting-edge technology to offer detailed property insights,
+        high-quality images, and virtual tours, allowing you to explore
+        potential homes from the comfort of your own space. Our commitment to
+        excellence means you’ll always have access to the most up-to-date
+        listings and market trends.
+      </p>
+
+      <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+        Our Community
+      </h2>
+      <p className="text-lg text-gray-700 mb-6">
+        At the heart of PropertEase is a vibrant community of real estate
+        enthusiasts, professionals, and homeowners. We value the trust our users
+        place in us and work tirelessly to foster a supportive and dynamic
+        environment where everyone can achieve their real estate goals. Our
+        customer service team is always ready to assist with any questions or
+        concerns, ensuring that you have the best possible experience on our
+        platform.
+      </p>
+
+      <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+        Join Us Today
+      </h2>
+      <p className="text-lg text-gray-700 mb-6">
+        Whether you’re a first-time homebuyer, an experienced investor, or
+        someone looking to rent the perfect apartment, PropertEase is here to
+        help you every step of the way. Join our growing community today and
+        discover how easy real estate can be with PropertEase.
       </p>
     </div>
   );
