@@ -35,11 +35,6 @@ export default function Profile() {
   const [showListingError, setShowListingError] = useState(false);
   const date = new Date();
   const dateTime = date.getTime();
-  //Firebase Storage Rules
-  //       allow read;
-  //       allow write: if
-  //       request.resource.size < 2 * 1024 * 1024 &&
-  //       request.resource.contentType.matches('image/.*');
 
   useEffect(() => {
     if (file) {
