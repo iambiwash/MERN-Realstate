@@ -51,7 +51,7 @@ export default function About() {
         Join Us Today
       </h2>
       <p className="text-lg text-gray-700 mb-6">
-        Whether you’re a first-time homebuyer, an experienced investor, or
+        Whether you&apos;re a first-time homebuyer, an experienced investor, or
         someone looking to rent the perfect apartment, PropertEase is here to
         help you every step of the way. Join our growing community today and
         discover how easy real estate can be with PropertEase.
