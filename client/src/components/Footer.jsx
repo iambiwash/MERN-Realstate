@@ -8,7 +8,7 @@ const Footer = () => {
             <h2 className="text-lg font-semibold">PropertEase LLC</h2>
             <p className="text-sm">1234 Street Address, Dallas, Texas, 12345</p>
             <p className="text-sm">
-              Email: info@company.com | Phone: (123) 456-7890
+              Email: visitpropertease@propertease.com | Phone: (123) 456-7890
             </p>
           </div>
           <div className="text-center md:text-right">
